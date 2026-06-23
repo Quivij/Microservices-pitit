@@ -1,0 +1,18 @@
+{
+  "name": "eazybuy-microservices",
+  "version": "1.0.0",
+  "scripts": {
+    "install:all": "npm --prefix gatewayserver install && npm --prefix cartservice install && npm --prefix productservice install && npm --prefix identityservice install && npm --prefix orderservice install && npm --prefix paymentservice install && npm --prefix frontend install",
+    "start:gateway": "npm --prefix gatewayserver start",
+    "start:cart": "npm --prefix cartservice start",
+    "start:product": "npm --prefix productservice start",
+    "start:identity": "npm --prefix identityservice start",
+    "start:order": "npm --prefix orderservice start",
+    "start:payment": "npm --prefix paymentservice start",
+    "start:frontend": "npm --prefix frontend start",
+    "start": "npx concurrently \"npm run start:gateway\" \"npm run start:cart\" \"npm run start:product\" \"npm run start:identity\" \"npm run start:order\" \"npm run start:payment\" \"npm run start:frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

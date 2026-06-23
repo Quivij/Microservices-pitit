@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Đặt hàng thành công</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #ddd; border-radius: 5px; }
+        .header { background-color: #4CAF50; color: white; text-align: center; padding: 10px; border-radius: 5px 5px 0 0; }
+        .content { padding: 20px; }
+        .footer { text-align: center; margin-top: 20px; font-size: 0.9em; color: #777; }
+        .btn { display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Cảm ơn bạn đã đặt hàng!</h2>
+        </div>
+        <div class="content">
+            <p>Xin chào <strong><%= user.name || "Kh�ch h�ng" %></strong>,</p>
+            <p>Đơn hàng của bạn đã được xác nhận thành công.</p>
+            <p><strong>Mã đơn hàng:</strong> <%= orderId %></p>
+            <p><strong>Tổng tiền:</strong> <%= totalAmount %> VND</p>
+            <p>Chúng tôi sẽ nhanh chóng xử lý và giao hàng cho bạn trong thời gian sớm nhất.</p>
+            <p>
+                <a href="<%= websiteUrl %>" class="btn">Tiếp tục mua sắm</a>
+            </p>
+        </div>
+        <div class="footer">
+            <p>Cảm ơn bạn đã tin tưởng EazyBuy.</p>
+        </div>
+    </div>
+</body>
+</html>
+

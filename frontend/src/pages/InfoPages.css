@@ -1,0 +1,239 @@
+/* InfoPages.css */
+.info-page-container {
+  min-height: 80vh;
+  background-color: #f8f9fa;
+  padding-bottom: 50px;
+}
+
+.info-header-banner {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.info-header-banner h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.info-header-banner p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.info-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.info-section {
+  background: white;
+  border-radius: 16px;
+  padding: 40px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.info-section h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.info-section p {
+  color: #555;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+.grid-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+.info-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-card i {
+  font-size: 3rem;
+  color: #6a11cb;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.info-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.info-card p {
+  font-size: 1rem;
+  color: #666;
+  text-align: center;
+}
+
+.info-cta {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.info-cta h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.btn-primary {
+  background: #6a11cb;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.btn-primary:hover {
+  background: #2575fc;
+  transform: scale(1.05);
+}
+
+/* Contact Page Specific */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.contact-details, .contact-form {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.contact-details h2, .contact-form h2 {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.contact-details > p {
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.contact-item i {
+  font-size: 1.5rem;
+  color: #6a11cb;
+  background: #f0e6ff;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.contact-item strong {
+  display: block;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.contact-item p {
+  color: #555;
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #444;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+  outline: none;
+  border-color: #6a11cb;
+  box-shadow: 0 0 0 3px rgba(106, 17, 203, 0.1);
+}
+
+.map-container {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+}
+
+.map-container h2 {
+  margin-bottom: 20px;
+  padding-left: 10px;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .info-header-banner h1 {
+    font-size: 2rem;
+  }
+}

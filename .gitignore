@@ -1,0 +1,65 @@
+# ============================================================
+# EazyBuy — .gitignore
+# ============================================================
+
+# ── Secrets & Environment ──
+# .env
+# .env.local
+# .env.*.local
+# *.env
+.claude/
+
+# ── Java & Maven (all microservices) ──
+**/target/
+!.mvn/wrapper/maven-wrapper.jar
+*.class
+*.jar
+*.war
+!.mvn/
+
+# ── Node & Frontend ──
+**/node_modules/
+**/.next/
+**/out/
+**/dist/
+*.tsbuildinfo
+next-env.d.ts
+
+# ── Package Manager ──
+# /package.json
+/pnpm-lock.yaml
+
+# ── Playwright ──
+**/test-results/
+**/playwright-report/
+**/playwright/.cache/
+
+# ── IDE — IntelliJ / VSCode ──
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.settings/
+.project
+.classpath
+.factorypath
+.springBeans
+.sts4-cache
+.nb-gradle/
+
+# ── OS ──
+.DS_Store
+Thumbs.db
+*~
+Desktop.ini
+
+# ── Docker ──
+docker-compose.override.yml
+
+# ── Logs & Temp ──
+*.log
+/tmp/
+/var/
+
+
