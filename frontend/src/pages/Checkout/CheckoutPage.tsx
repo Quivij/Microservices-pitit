@@ -134,63 +134,31 @@ const CheckoutPage = () => {
             return;
         }
 
-        let paymentWindow: Window | null = null;
-        if (paymentMethod === 'bank') {
-            paymentWindow = window.open('', '_blank');
-            if (!paymentWindow) {
-                toast.error("Không thể mở tab thanh toán. Vui lòng tắt chặn popup của trình duyệt.");
-                return;
-            }
-        }
-
         try {
             const payload = {
                 items: items.map(item => item.product._id),
                 voucherCode: voucher?.code || null,
                 usedXu: Number(usedXu) || 0,
                 deliveryAddressId: selectedAddressId,
-                type: paymentMethod // Thêm type thanh toán
+                type: paymentMethod, // Thêm type thanh toán
+                returnUrl: window.location.origin + '/payment-callback' // Thêm url để VNPay trả về
             };
             // Bank - Thanh toán qua ngân hàng
             const res = await paymentApi.createQr(payload);
 
             if (res.success) {
                 if (paymentMethod === 'bank' && res.url) {
-                    if (paymentWindow) {
-                        paymentWindow.location.href = res.url;
-                    }
-
-                    // Lắng nghe kết quả từ tab thanh toán
-                    const handleMessage = (event: MessageEvent) => {
-                        if (event.origin !== window.location.origin) return;
-                        if (!event.data || event.data.type !== "PAYMENT_CALLBACK") return;
-
-                        const { status } = event.data;
-                        let message = "";
-                        switch (status) {
-                            case "paid": message = "🎉 Thanh toán thành công!"; break;
-                            case "failed": message = "❌ Thanh toán thất bại!"; break;
-                            case "invalid": message = "⚠️ Giao dịch không hợp lệ!"; break;
-                            case "notfound": message = "🔎 Không tìm thấy đơn hàng!"; break;
-                            default: message = "Có lỗi xảy ra trong quá trình thanh toán.";
-                        }
-
-                        setPaymentResultModal({ visible: true, message });
-                        window.removeEventListener("message", handleMessage);
-                    };
-
-                    window.addEventListener("message", handleMessage);
+                    // Chuyển hướng trực tiếp ở tab hiện tại để tương thích với điện thoại
+                    window.location.href = res.url;
                 } else if (paymentMethod === 'cod') {
                     // Trường hợp thanh toán COD
                     setPaymentResultModal({ visible: true, message: "🎉 Đặt hàng thành công! Đơn hàng của bạn sẽ được giao đến địa chỉ đã chọn." });
                 }
             } else {
-                if (paymentWindow) paymentWindow.close();
                 toast.error("Không tạo được link thanh toán");
             }
 
         } catch (err) {
-            if (paymentWindow) paymentWindow.close();
             console.error("Error creating payment:", err);
             toast.error("Có lỗi xảy ra khi tạo thanh toán");
         }

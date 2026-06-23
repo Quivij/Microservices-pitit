@@ -219,7 +219,7 @@ export const createQr = async (req, res) => {
       vnp_TxnRef: order._id.toString(),
       vnp_OrderInfo: `Thanh toán đơn hàng ${order._id}`,
       vnp_OrderType: ProductCode.Other,
-      vnp_ReturnUrl: process.env.VNPAY_RETURN_URL || "http://localhost:6969/v1/api/payment/vnpay_return",
+      vnp_ReturnUrl: req.body.returnUrl || process.env.VNPAY_RETURN_URL || "http://localhost:6969/v1/api/payment/vnpay_return",
       vnp_Locale: VnpLocale.VN,
       vnp_CreateDate: dateFormat(new Date()),
       vnp_ExpireDate: dateFormat(new Date(Date.now() + 15 * 60 * 1000)),
@@ -238,14 +238,14 @@ export const checkPayment = async (req, res) => {
     const verify = vnpay.verifyReturnUrl(query);
 
     if (false && !verify.isVerified) {
-      return res.redirect(`http://localhost:3000/payment-callback?status=invalid`);
+      return res.status(400).json({ success: false, message: "Chữ ký không hợp lệ" });
     }
 
     const orderId = query.vnp_TxnRef;
     const order = await Order.findById(orderId);
 
     if (!order) {
-      return res.redirect(`http://localhost:3000/payment-callback?status=notfound`);
+      return res.status(404).json({ success: false, message: "Không tìm thấy đơn hàng" });
     }
 
     const user = await User.findById(order.user);
@@ -308,14 +308,10 @@ export const checkPayment = async (req, res) => {
       }
 
       // Redirect to cart page with success status
-      return res.redirect(`http://localhost:3000/payment-callback?status=paid`);
+      return res.status(200).json({ success: true, message: "Thanh toán thành công" });
     } else {
       await order.deleteOne();
-      // order.status = "failed";
-      // order.paymentInfo = query;
-      // await order.save();
-
-      return res.redirect(`http://localhost:3000/payment-callback?status=failed`);
+      return res.status(400).json({ success: false, message: "Thanh toán thất bại hoặc đã bị hủy" });
     }
   } catch (error) {
     console.error("checkPayment error:", error); fs.writeFileSync("checkpayment_error.txt", error.stack || error.toString());

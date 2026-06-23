@@ -1,36 +1,69 @@
-import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import { Spin } from 'antd';
+import React, { useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { Spin, Result, Button } from 'antd';
+import { paymentApi } from '../../api/paymentApi.ts';
 
 const PaymentCallbackPage = () => {
     const location = useLocation();
+    const navigate = useNavigate();
+    const [loading, setLoading] = useState(true);
+    const [result, setResult] = useState<{ success: boolean; message: string } | null>(null);
 
     useEffect(() => {
-        // Lấy các tham số từ URL (ví dụ: ?status=paid)
-        const params = new URLSearchParams(location.search);
-        const status = params.get('status');
-        const orderId = params.get('vnp_TxnRef'); // Lấy thêm orderId nếu cần
+        const processPayment = async () => {
+            try {
+                // Gọi API backend checkPayment
+                const query = location.search;
+                const res = await paymentApi.checkPayment(query);
+                
+                if (res.success) {
+                    setResult({ success: true, message: res.message || "Thanh toán thành công!" });
+                } else {
+                    setResult({ success: false, message: res.message || "Thanh toán thất bại!" });
+                }
+            } catch (error: any) {
+                console.error("Payment callback error:", error);
+                setResult({ 
+                    success: false, 
+                    message: error.response?.data?.message || "Có lỗi xảy ra khi xác nhận thanh toán" 
+                });
+            } finally {
+                setLoading(false);
+            }
+        };
 
-        // Kiểm tra xem trang này có được mở bởi một trang khác không (window.opener)
-        if (window.opener) {
-            // Gửi thông điệp chứa kết quả về cho trang gốc
-            window.opener.postMessage({
-                type: "PAYMENT_CALLBACK",
-                status: status,
-                orderId: orderId
-            },
-                '*' // Gửi tới bất kỳ origin nào, hoặc chỉ định origin của bạn để bảo mật hơn, ví dụ: 'http://localhost:3000'
-            );
-
-            // Đóng tab/cửa sổ này lại
-            window.close();
+        if (location.search) {
+            processPayment();
+        } else {
+            setLoading(false);
+            setResult({ success: false, message: "Không tìm thấy thông tin thanh toán hợp lệ" });
         }
     }, [location]);
 
-    // Hiển thị một spinner trong lúc xử lý để người dùng không thấy trang trắng
+    if (loading) {
+        return (
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', flexDirection: 'column' }}>
+                <Spin size="large" />
+                <h3 style={{ marginTop: 20 }}>Đang xử lý kết quả thanh toán...</h3>
+            </div>
+        );
+    }
+
     return (
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-            <Spin size="large" tip="Đang xử lý thanh toán..." />
+            <Result
+                status={result?.success ? "success" : "error"}
+                title={result?.success ? "Thanh toán thành công!" : "Thanh toán thất bại"}
+                subTitle={result?.message}
+                extra={[
+                    <Button type="primary" key="orders" onClick={() => navigate('/orders')}>
+                        Xem đơn hàng
+                    </Button>,
+                    <Button key="home" onClick={() => navigate('/home')}>
+                        Về trang chủ
+                    </Button>,
+                ]}
+            />
         </div>
     );
 };

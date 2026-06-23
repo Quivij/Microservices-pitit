@@ -1,153 +1,21 @@
-2026-06-23T17:11:55Z INF Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee, are subject to the Cloudflare Online Services Terms of Use (https://www.cloudflare.com/website-terms/), and Cloudflare reserves the right to investigate your use of Tunnels for violations of such terms. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps
-2026-06-23T17:11:55Z INF Requesting new quick Tunnel on trycloudflare.com...
-2026-06-23T17:11:59Z INF +--------------------------------------------------------------------------------------------+
-2026-06-23T17:11:59Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
-2026-06-23T17:11:59Z INF |  https://letter-advert-slowly-venture.trycloudflare.com                                    |
-2026-06-23T17:11:59Z INF +--------------------------------------------------------------------------------------------+
-2026-06-23T17:11:59Z INF Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp]
-2026-06-23T17:11:59Z INF Version 2026.3.0 (Checksum 59b12880b24af581cf5b1013db601c7d843b9b097e9c78aa5957c7f39f741885)
-2026-06-23T17:11:59Z INF GOOS: windows, GOVersion: go1.24.13, GoArch: amd64
-2026-06-23T17:11:59Z INF Settings: map[ha-connections:1 protocol:quic url:http://localhost:3000]
-2026-06-23T17:11:59Z INF cloudflared will not automatically update on Windows systems.
-2026-06-23T17:11:59Z INF Generated Connector ID: f6a8f2cb-599e-400c-b28b-ba40372b2bbc
-2026-06-23T17:11:59Z INF Initial protocol quic
-2026-06-23T17:11:59Z INF ICMP proxy will use 10.72.129.18 as source for IPv4
-2026-06-23T17:11:59Z INF ICMP proxy will use fe80::1069:856f:fbd:a6b6 in zone Ethernet 3 as source for IPv6
-2026-06-23T17:11:59Z INF cloudflared does not support loading the system root certificate pool on Windows. Please use --origin-ca-pool <PATH> to specify the path to the certificate pool
-2026-06-23T17:11:59Z INF ICMP proxy will use 10.72.129.18 as source for IPv4
-2026-06-23T17:11:59Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.233
-2026-06-23T17:11:59Z INF ICMP proxy will use fe80::1069:856f:fbd:a6b6 in zone Ethernet 3 as source for IPv6
-2026-06-23T17:11:59Z INF Starting metrics server on 127.0.0.1:20241/metrics
-2026-06-23T17:11:59Z INF Registered tunnel connection connIndex=0 connection=14d3b6de-b81b-470e-be05-efcc23d240fe event=0 ip=198.41.200.233 location=hkg11 protocol=quic
-2026-06-23T17:12:45Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:12:45Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:13:06Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:13:06Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:13:28Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:13:28Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:13:53Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:13:53Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:14:17Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:14:17Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:14:42Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:14:42Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:15:07Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:15:07Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:15:33Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:15:33Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:15:58Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:15:58Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:16:19Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:16:19Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:16:39Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:16:39Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:17:00Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:17:00Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:17:23Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:17:23Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:17:48Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:17:48Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:18:13Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:18:13Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:18:38Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:18:38Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:19:04Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:19:04Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:19:30Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:19:30Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:19:55Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:19:55Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:20:20Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:20:20Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:20:46Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:20:46Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:21:02Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:21:02Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:21:23Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:21:23Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:21:44Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:21:44Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:22:06Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:22:06Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:22:30Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:22:30Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:22:55Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:22:55Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:23:20Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:23:20Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:23:45Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:23:45Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:24:11Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:24:11Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:24:37Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:24:37Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:25:02Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:25:02Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:25:27Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:25:27Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:25:52Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:25:52Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:26:17Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:26:17Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:26:42Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:26:42Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:27:08Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:27:08Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:27:34Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:27:34Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:27:59Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:27:59Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:28:24Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:28:24Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:28:49Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:28:49Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:29:05Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:29:05Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:29:26Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:29:26Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:29:47Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:29:47Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:30:09Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:30:09Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:30:33Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:30:33Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:30:58Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:30:58Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:31:23Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:31:23Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:31:48Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:31:48Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:32:13Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:32:13Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:32:38Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:32:38Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:33:03Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:33:03Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:33:28Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:33:28Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:33:53Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:33:53Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:34:18Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:34:18Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:34:44Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:34:44Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:35:10Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:35:10Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:35:36Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:35:36Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:36:02Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:36:02Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:36:48Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:36:48Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:37:44Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:37:44Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:38:09Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:38:09Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:38:35Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:38:35Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:39:40Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:39:40Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:40:06Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:40:06Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
-2026-06-23T17:40:33Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-23T17:40:33Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://letter-advert-slowly-venture.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.233 type=ws
+2026-06-23T18:09:34Z INF Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee, are subject to the Cloudflare Online Services Terms of Use (https://www.cloudflare.com/website-terms/), and Cloudflare reserves the right to investigate your use of Tunnels for violations of such terms. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps
+2026-06-23T18:09:34Z INF Requesting new quick Tunnel on trycloudflare.com...
+2026-06-23T18:09:38Z INF +--------------------------------------------------------------------------------------------+
+2026-06-23T18:09:38Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
+2026-06-23T18:09:38Z INF |  https://washington-cms-characterization-wal.trycloudflare.com                             |
+2026-06-23T18:09:38Z INF +--------------------------------------------------------------------------------------------+
+2026-06-23T18:09:38Z INF Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp]
+2026-06-23T18:09:38Z INF Version 2026.3.0 (Checksum 59b12880b24af581cf5b1013db601c7d843b9b097e9c78aa5957c7f39f741885)
+2026-06-23T18:09:38Z INF GOOS: windows, GOVersion: go1.24.13, GoArch: amd64
+2026-06-23T18:09:38Z INF Settings: map[ha-connections:1 protocol:quic url:http://localhost:3000]
+2026-06-23T18:09:38Z INF cloudflared will not automatically update on Windows systems.
+2026-06-23T18:09:38Z INF Generated Connector ID: 32d8e8ad-4909-491e-9074-f473a149d26a
+2026-06-23T18:09:38Z INF Initial protocol quic
+2026-06-23T18:09:38Z INF ICMP proxy will use 10.72.129.18 as source for IPv4
+2026-06-23T18:09:38Z INF ICMP proxy will use fe80::e1b9:f47e:35a1:8f0f in zone Ethernet 3 as source for IPv6
+2026-06-23T18:09:38Z INF cloudflared does not support loading the system root certificate pool on Windows. Please use --origin-ca-pool <PATH> to specify the path to the certificate pool
+2026-06-23T18:09:38Z INF ICMP proxy will use 10.72.129.18 as source for IPv4
+2026-06-23T18:09:38Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.113
+2026-06-23T18:09:38Z INF ICMP proxy will use fe80::e1b9:f47e:35a1:8f0f in zone Ethernet 3 as source for IPv6
+2026-06-23T18:09:38Z INF Starting metrics server on 127.0.0.1:20241/metrics
+2026-06-23T18:09:39Z INF Registered tunnel connection connIndex=0 connection=562112ba-3443-4682-85a6-fcb9c6c3358d event=0 ip=198.41.200.113 location=hkg11 protocol=quic
