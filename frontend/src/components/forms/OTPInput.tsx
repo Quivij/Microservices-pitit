@@ -10,12 +10,22 @@ export default function OTPInput({ length, value, onChange }: OTPInputProps) {
   const refs = useRef<HTMLInputElement[]>([]);
 
   const handleChange = (i: number, e: React.ChangeEvent<HTMLInputElement>) => {
+    let val = e.target.value;
+    
+    // Lấy ký tự cuối cùng nếu lỡ nhập đè nhiều ký tự
+    if (val.length > 1) {
+      val = val.slice(-1);
+    }
+
     const newValue = [...value];
-    newValue[i] = e.target.value;
+    newValue[i] = val;
     onChange(newValue);
 
-    if (e.target.value && i < length - 1) {
-      refs.current[i + 1]?.focus();
+    if (val && i < length - 1) {
+      // Dùng setTimeout để tránh lỗi bàn phím điện thoại tự nhảy đúp chữ vào ô tiếp theo
+      setTimeout(() => {
+        refs.current[i + 1]?.focus();
+      }, 10);
     }
   };
 

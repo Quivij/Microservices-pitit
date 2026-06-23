@@ -27,7 +27,7 @@ export default function ForgotPasswordPage() {
     setSuccess(null);
     setOtpLoading(true);
     try {
-      const response = await fetch("http://localhost:6969/v1/api/resend-otp", {
+      const response = await fetch("/v1/api/resend-otp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: form.email }),
@@ -70,7 +70,7 @@ export default function ForgotPasswordPage() {
 
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:6969/v1/api/forgot-password", {
+      const response = await fetch("/v1/api/forgot-password", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

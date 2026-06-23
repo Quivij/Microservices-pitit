@@ -82,7 +82,7 @@ export default function RegisterPage() {
     setLoading(true);
     try {
       // Gọi API đăng ký để kiểm tra tài khoản đã tồn tại hay có lỗi gì không
-      const response = await fetch("http://localhost:6969/v1/api/register", {
+      const response = await fetch("/v1/api/register", {
         method: "POST",
         headers: { 
           "Content-Type": "application/json" 

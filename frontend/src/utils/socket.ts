@@ -4,7 +4,7 @@ let socket: Socket | null = null;
 
 export const getSocket = () => {
   if (!socket) {
-    socket = io("http://localhost:6969", {
+    socket = io("/", {
       autoConnect: true, // tự kết nối khi import
       transports: ["websocket"], // đảm bảo dùng websocket
     });

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import axiosClient from './axiosClient.ts';
 
-const API_URL = 'http://localhost:6969/v1/api';
+const API_URL = '/v1/api';
 
 export const registerUser = async (data: {
   fullName: string;

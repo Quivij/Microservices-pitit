@@ -25,7 +25,7 @@ export const loginThunk = createAsyncThunk(
     { rejectWithValue }
   ) => {
     try {
-      const res = await fetch("http://localhost:6969/v1/api/login", {
+      const res = await fetch("/v1/api/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
