@@ -352,3 +352,44 @@
   text-align: center;
   color: #6b7280;
 }
+
+/* 📱 Responsive cho điện thoại */
+@media (max-width: 768px) {
+  .uts-container {
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+  }
+  
+  .uts-container.left {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .uts-navlinks {
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 14px;
+    gap: 12px;
+  }
+  
+  .uts-actions {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .uts-logo-text {
+    font-size: 24px;
+  }
+
+  .uts-btn {
+    font-size: 13px;
+    padding: 5px 12px;
+  }
+
+  .uts-notification-dropdown {
+    width: 300px;
+    right: -50px;
+  }
+}

@@ -47,3 +47,25 @@
 .btn-header:hover {
   background: #f0b930;
 }
+
+/* 📱 Responsive cho điện thoại */
+@media (max-width: 768px) {
+  .header {
+    min-height: 200px;
+  }
+
+  .header-content h1 {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .header-content p {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .btn-header {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
