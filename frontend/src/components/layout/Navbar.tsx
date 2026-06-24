@@ -75,6 +75,20 @@ const Navbar: React.FC = () => {
     }
   };
 
+  const handleMarkAllAsRead = async () => {
+    const unreadNotis = notifications.filter(n => !n.isRead);
+    if (unreadNotis.length === 0) return;
+
+    // Cập nhật UI ngay lập tức
+    setNotifications(prev => prev.map(n => ({ ...n, isRead: true })));
+
+    try {
+      await Promise.all(unreadNotis.map(n => notificationApi.markAsRead(n._id)));
+    } catch (error) {
+      console.error("Failed to mark all notifications as read:", error);
+    }
+  };
+
   // Click outside dropdown
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -166,8 +180,16 @@ const Navbar: React.FC = () => {
 
             {isNotificationOpen && (
               <div className="uts-notification-dropdown">
-                <div className="uts-noti-header">
+                <div className="uts-noti-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                   <span>🔔 Thông báo</span>
+                  {notifications.some(n => !n.isRead) && (
+                    <button 
+                      onClick={handleMarkAllAsRead} 
+                      style={{ fontSize: '12px', background: 'none', border: 'none', color: '#3b82f6', cursor: 'pointer', padding: 0 }}
+                    >
+                      Đánh dấu tất cả đã đọc
+                    </button>
+                  )}
                 </div>
                 <div className="uts-noti-list">
                   {notifications.length > 0 ? (
@@ -194,6 +216,11 @@ const Navbar: React.FC = () => {
           {token && user ? (
             <div className="uts-user-info" ref={userDropdownRef}>
               <span className="uts-username" onClick={toggleUserDropdown}>
+                <img 
+                  src={user.avt || "https://i.pravatar.cc/150"} 
+                  alt="avatar" 
+                  className="uts-user-avatar"
+                />
                 Xin chào, {user.fullName} <i className={`bi bi-chevron-${isUserDropdownOpen ? "up" : "down"}`}></i>
               </span>
               {isUserDropdownOpen && (

@@ -57,9 +57,10 @@ class MailService {
         try {
             const subject = `Cảm ơn bạn đã đặt hàng tại PTITShop - Đơn hàng #${order._id}`;
             const data = {
-                user,
-                order,
-                shopUrl
+                user: { name: user.fullName || user.username },
+                orderId: order._id,
+                totalAmount: order.totalPrice ? order.totalPrice.toLocaleString('vi-VN') : 0,
+                websiteUrl: shopUrl
             };
 
             await this.sendMail(user.email, subject, "order-success.ejs", data);

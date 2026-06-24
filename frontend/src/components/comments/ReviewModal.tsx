@@ -159,7 +159,7 @@ const ReviewModal: React.FC<ReviewModalProps> = ({
                             <button
                                 type="submit"
                                 className="btn-submit"
-                                disabled={submitting || comment.trim().length < 10}
+                                disabled={submitting}
                             >
                                 {submitting ? 'Đang gửi...' : 'Gửi đánh giá'}
                             </button>

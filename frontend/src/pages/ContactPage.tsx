@@ -20,7 +20,7 @@ const ContactPage: React.FC = () => {
               <i className="bi bi-geo-alt-fill"></i>
               <div>
                 <strong>Địa chỉ:</strong>
-                <p>168 Man Thiện, Phường Tăng Nhơn Phú A, TP. Thủ Đức, TP. Hồ Chí Minh</p>
+                <p>97 Man Thiện, Phường Hiệp Phú, TP. Thủ Đức, TP. Hồ Chí Minh</p>
               </div>
             </div>
 
@@ -28,7 +28,7 @@ const ContactPage: React.FC = () => {
               <i className="bi bi-person-fill"></i>
               <div>
                 <strong>Người đại diện:</strong>
-                <p>Nguyễn Thanh Quí</p>
+                <p>Nguyễn Thanh Qui</p>
               </div>
             </div>
 
@@ -74,7 +74,7 @@ const ContactPage: React.FC = () => {
         <div className="map-container">
           <h2>Bản đồ đường đi</h2>
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.420663991515!2d106.7825220757367!3d10.847936657870196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527158a0a5b81%3A0xf45c5d34ac580517!2sH%E1%BB%8Dc%20vi%E1%BB%87n%20C%C3%B4ng%20ngh%E1%BB%87%20B%C6%B0u%20ch%C3%ADnh%20Vi%E1%BB%85n%20th%C3%B4ng%20C%C6%A1%20s%E1%BB%9F%20t%E1%BA%A1i%20TP.H%E1%BB%93%20Ch%C3%AD%20Minh!5e0!3m2!1svi!2s!4v1700000000000!5m2!1svi!2s" 
+            src="https://maps.google.com/maps?q=97%20Man%20Thi%E1%BB%87n,%20Hi%E1%BB%87p%20Ph%C3%BA,%20Th%E1%BB%A7%20%C4%90%E1%BB%A9c,%20H%E1%BB%93%20Ch%C3%AD%20Minh&t=&z=17&ie=UTF8&iwloc=&output=embed"
             width="100%" 
             height="400" 
             style={{ border: 0, borderRadius: '12px' }} 

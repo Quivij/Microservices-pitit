@@ -227,18 +227,7 @@ export default function HomePage() {
         formatPrice={formatPrice}
       />
 
-      {/* Recommendation Section */}
-      <div style={{ padding: "0 16px" }}>
-        <RecommendationSection
-          title={token ? `Dành Cho ${user?.fullName?.split(" ").pop() || "Bạn"}` : "Có Thể Bạn Thích"}
-          subtitle={token ? "Gợi ý dựa trên lịch sử xem và mua hàng của bạn" : "Sản phẩm phổ biến được nhiều người yêu thích"}
-          badge={token ? "✨ AI Gợi Ý" : "🔥 Phổ Biến"}
-          badgeColor={token ? "#7c3aed" : "#f97316"}
-          products={recProducts}
-          loading={recLoading}
-          formatPrice={formatPrice}
-        />
-      </div>
+      {/* Recommendation Section (Removed) */}
 
 
       {/* Features Section */}

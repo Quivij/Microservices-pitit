@@ -64,6 +64,22 @@ export default function AdminHeader() {
       console.error("Failed to mark notification as read:", error);
     }
   };
+
+  const handleMarkAllAsRead = async () => {
+    const unreadNotis = notifications.filter(n => !n.isRead);
+    if (unreadNotis.length === 0) return;
+
+    // Cập nhật UI ngay lập tức
+    setNotifications(prev => prev.map(n => ({ ...n, isRead: true })));
+
+    try {
+      // Gửi các request lên server ngầm
+      await Promise.all(unreadNotis.map(n => notificationApi.markAsRead(n._id)));
+    } catch (error) {
+      console.error("Failed to mark all notifications as read:", error);
+    }
+  };
+
   const handleLogout = () => {
     // TODO: xóa token / clear localStorage rồi redirect về trang login
     if (typeof localStorage !== "undefined") {
@@ -92,10 +108,11 @@ export default function AdminHeader() {
           onMouseLeave={() => setIsNotificationOpen(false)}
         >
           <button
-            className="uts-icon-btn"
+            className="icon-btn"
             onClick={() => setIsNotificationOpen(!isNotificationOpen)}
+            style={{ position: 'relative' }}
           >
-            <i className="bi bi-bell"></i>
+            <Bell size={24} />
             {notifications.some(n => !n.isRead) && (
               <span className="uts-badge">{notifications.filter(n => !n.isRead).length}</span>
             )}
@@ -103,8 +120,16 @@ export default function AdminHeader() {
 
           {isNotificationOpen && (
             <div className="uts-notification-dropdown">
-              <div className="uts-noti-header">
+              <div className="uts-noti-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <span>🔔 Thông báo</span>
+                {notifications.some(n => !n.isRead) && (
+                  <button 
+                    onClick={handleMarkAllAsRead} 
+                    style={{ fontSize: '12px', background: 'none', border: 'none', color: '#3b82f6', cursor: 'pointer', padding: 0 }}
+                  >
+                    Đánh dấu tất cả đã đọc
+                  </button>
+                )}
               </div>
               <div className="uts-noti-list">
                 {notifications.length > 0 ? (
@@ -130,7 +155,7 @@ export default function AdminHeader() {
 
         <div className="avatar-wrapper">
           <img
-            src="https://i.pravatar.cc/40"
+            src={user?.avt || "https://i.pravatar.cc/40"}
             alt="avatar"
             className="avatar"
             onClick={() => setOpen(!open)}

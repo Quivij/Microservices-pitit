@@ -49,7 +49,8 @@ const initApiRoutes = (app) => {
   router.post("/profile/avatar", authMiddleware, upload.single("avatar"), async (req, res) => {
       try {
           if (!req.file) return res.status(400).json({ success: false, message: "No file uploaded" });
-          const avatarUrl = `http://localhost:6972/public/avatars/${req.file.filename}`;
+          // Sửa lại thành đường dẫn tương đối để Gateway có thể proxy, không dùng cứng localhost
+          const avatarUrl = `/public/avatars/${req.file.filename}`;
           const userId = req.user.userId || req.user._id;
           await UserService.updateUserProfile(userId, { avt: avatarUrl });
           return res.status(200).json({ success: true, data: { avatarUrl } });

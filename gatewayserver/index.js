@@ -32,6 +32,7 @@ const routes = {
     // Payment Service
     '/v1/api/payment': 'http://localhost:6974',
     '/v1/api/voucher': 'http://localhost:6974',
+    '/v1/api/admin/vouchers': 'http://localhost:6974',
 
     // Cart Service
     '/v1/api/cart': 'http://localhost:6970',
@@ -45,11 +46,35 @@ const routes = {
     '/v1/api/reviews': 'http://localhost:6971',
     '/v1/api/recommendations': 'http://localhost:6971',
     '/v1/api/admin/products': 'http://localhost:6971',
-    '/v1/api/admin/categories': 'http://localhost:6971'
+    '/v1/api/admin/categories': 'http://localhost:6971',
+
+    // Static files (Avatars)
+    '/public': 'http://localhost:6972'
 };
 
-for (const [path, target] of Object.entries(routes)) {
-    app.use(path, createProxyMiddleware({ target, changeOrigin: true }));
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Serve avatars static directory directly
+app.use('/public', (req, res, next) => {
+    console.log("STATIC REQ:", req.url, "ORIGINAL:", req.originalUrl);
+    next();
+}, express.static(path.join(__dirname, '../identityservice/public')));
+
+for (const [routePath, target] of Object.entries(routes)) {
+    if (routePath === '/public') continue;
+    
+    app.use(routePath, createProxyMiddleware({ 
+        target, 
+        changeOrigin: true,
+        onError: (err, req, res) => {
+            console.error(`[PROXY ERROR] ${req.originalUrl}`, err);
+            res.status(502).send('Bad Gateway');
+        }
+    }));
 }
 
 // Fallback proxy (nếu không map được, gửi tạm về productservice hoặc một service mặc định)

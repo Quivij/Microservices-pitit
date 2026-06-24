@@ -94,9 +94,10 @@ const UserDetailModal: React.FC<{
         const fetched = await adminOrderApi.getOrdersByUserId(idKey);
         console.log("[UserDetailModal] fetched raw orders:", fetched);
 
-        const rawOrders = Array.isArray(fetched)
-          ? fetched
-          : fetched?.data || fetched?.orders || [];
+        const raw = fetched as any;
+        const rawOrders = Array.isArray(raw)
+          ? raw
+          : raw?.data?.orders || raw?.data || raw?.orders || [];
 
         if (!Array.isArray(rawOrders)) {
           console.warn("[UserDetailModal] rawOrders is not an array");
@@ -486,20 +487,7 @@ const UserDetailModal: React.FC<{
                         marginTop: 12,
                       }}
                     >
-                      {!isEditing ? (
-                        <button className="btn ghost" onClick={() => setIsEditing(true)}>
-                          Chỉnh sửa
-                        </button>
-                      ) : (
-                        <>
-                          <button className="btn ghost" onClick={handleCancel} disabled={saving}>
-                            Hủy
-                          </button>
-                          <button className="btn primary" onClick={handleSave} disabled={saving}>
-                            {saving ? "Đang lưu..." : "Lưu"}
-                          </button>
-                        </>
-                      )}
+                      {/* Bỏ tính năng chỉnh sửa thông tin người dùng */}
                     </div>
                   </div>
                 </div>

@@ -1,4 +1,4 @@
-import { LayoutDashboard, Users, Package, ShoppingCart, BarChart3 } from "lucide-react";
+import { LayoutDashboard, Users, Package, ShoppingCart, Ticket } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import "./AdminSidebar.css";
 
@@ -27,9 +27,9 @@ export default function AdminSidebar() {
           <ShoppingCart size={18} />
           <span>Orders</span>
         </NavLink>
-        <NavLink to="/admin/reports">
-          <BarChart3 size={18} />
-          <span>Reports</span>
+        <NavLink to="/admin/vouchers">
+          <Ticket size={18} />
+          <span>Vouchers</span>
         </NavLink>
       </nav>
     </aside>

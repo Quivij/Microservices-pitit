@@ -8,6 +8,7 @@ import AdminProductsPage from "./pages/Admin/products/AdminProductsPage.tsx";
 import AdminOrdersPage from "./pages/Admin/orders/AdminOrdersPage.tsx";
 
 //import AdminReportsPage from "./pages/Admin/reports/AdminReportsPage.tsx";
+import AdminVouchersPage from "./pages/Admin/vouchers/AdminVouchersPage.tsx";
 import AdminUsersPage from "./pages/Admin/users/AdminUsersPage.tsx";
 
 // layouts
@@ -113,7 +114,7 @@ export default function App() {
             <Route path="dashboard" element={<DashboardPage />} />
             <Route path="orders" element={<AdminOrdersPage />} />
             <Route path="products" element={<AdminProductsPage />} />
-            {/* <Route path="reports" element={<AdminReportsPage />} /> */}
+            <Route path="vouchers" element={<AdminVouchersPage />} />
             <Route path="users" element={<AdminUsersPage />} />
           </Route>
         </Routes>

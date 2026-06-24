@@ -1,4 +1,4 @@
-import User from "../../models/user.js";
+﻿import User from "../../models/user.js";
 import OtpUtil from "../../utils/OtpUtil.js";
 import MailService from "../mail/mailService.js";
 
@@ -8,7 +8,7 @@ class OTPService {
 
     await MailService.sendMail(
       email,
-      "Your OTP Code - UTE-Shop",
+      "Your OTP Code - PTIT-Shop",
       "otp-email.ejs",
       { fullName, otp }
     );
@@ -79,3 +79,4 @@ class OTPService {
 }
 
 export default OTPService;
+

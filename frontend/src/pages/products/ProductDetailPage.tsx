@@ -40,10 +40,10 @@ export default function ProductDetailPage() {
 
     try {
       await cartApi.addToCart(product._id, quantity);
-      navigate("/cart");
+      toast.success("Đã thêm vào giỏ hàng!");
     } catch (error) {
       console.error("❌ Lỗi khi thêm vào giỏ:", error);
-      alert("Thêm vào giỏ hàng thất bại");
+      toast.error("Thêm vào giỏ hàng thất bại");
     }
   };
   useEffect(() => {
@@ -78,7 +78,7 @@ export default function ProductDetailPage() {
     };
 
     fetchRelatedProduct();
-  }, [product?.category?._id]);
+  }, [product]);
 
 
   useEffect(() => {
@@ -107,6 +107,18 @@ export default function ProductDetailPage() {
     return <div className="p-4">❌ Không tìm thấy sản phẩm</div>;
   }
 
+  const handleBuyNow = async () => {
+    if (!product) return;
+
+    try {
+      await cartApi.addToCart(product._id, quantity);
+      navigate("/cart");
+    } catch (error) {
+      console.error("❌ Lỗi khi mua ngay:", error);
+      toast.error("Chuyển đến giỏ hàng thất bại");
+    }
+  };
+
   const increment = () => {
     if (quantity < (product.quantity || 1)) setQuantity(quantity + 1);
   };
@@ -114,7 +126,6 @@ export default function ProductDetailPage() {
   const decrement = () => {
     if (quantity > 1) setQuantity(quantity - 1);
   };
-
 
   const handleToggleFavorite = async () => {
     if (!product || !user) {
@@ -124,7 +135,6 @@ export default function ProductDetailPage() {
 
     try {
       await profileApi.toggleFavoriteProduct(product._id);
-      // Cập nhật Redux state ngay lập tức
       dispatch(toggleFavoriteProduct(product._id));
     } catch (error) {
       console.error("Error toggling favorite:", error);
@@ -168,7 +178,6 @@ export default function ProductDetailPage() {
           <p><strong>Danh mục:</strong> {product.category.name}</p>
           <p><strong>Đã bán:</strong> {product.sold}</p>
           <p><strong>Lượt xem:</strong> {product.views}</p>
-          <p><strong>Ngày thêm:</strong> {new Date(product.createdAt).toLocaleDateString()}</p>
           <p><strong>Tồn kho:</strong> {product.quantity}</p>
 
           {/* Chọn số lượng */}
@@ -178,10 +187,15 @@ export default function ProductDetailPage() {
             <button onClick={increment}>+</button>
           </div>
 
-          {/* Nút thêm vào giỏ */}
-          <button className="btn-add-cart" onClick={handleAddToCart}>
-            🛒 Thêm {quantity} vào giỏ
-          </button>
+          {/* Nút thêm vào giỏ và Mua ngay */}
+          <div className="cart-action-buttons">
+            <button className="btn-add-cart" onClick={handleAddToCart}>
+              🛒 Thêm {quantity} vào giỏ
+            </button>
+            <button className="btn-buy-now" onClick={handleBuyNow}>
+              ⚡ Mua ngay
+            </button>
+          </div>
         </div>
         <div className="action-buttons">
           <button
