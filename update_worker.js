@@ -4,7 +4,7 @@
 const https = require('https');
 
 // ===== CAU HINH =====
-const workerUrl = "https://vpp-stationery.estt.workers.dev/update";
+const workerUrl = "https://ptitshop-online.nguyenthanhqui-0401.workers.dev/";
 // ===================
 
 const args = process.argv.slice(2);
@@ -28,7 +28,7 @@ https.get(updateUrl, (res) => {
     res.on('end', () => {
         if (res.statusCode >= 200 && res.statusCode < 300) {
             console.log("SUCCESS: Da cap nhat Worker thanh cong!");
-            console.log("Link vinh vien cua ban: https://vpp-stationery.estt.workers.dev/");
+            console.log("Link vinh vien cua ban: https://ptitshop-online.nguyenthanhqui-0401.workers.dev/");
         } else {
             console.error(`ERROR: Cap nhat Worker that bai (HTTP ${res.statusCode}).`);
             console.error("Chi tiet: " + data);
