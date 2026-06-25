@@ -10,14 +10,14 @@ echo =======================================================
 echo.
 
 echo 1. Dang xoa cac phien lam viec cu de tranh loi...
-:: taskkill /F /IM node.exe >nul 2>&1
+taskkill /F /IM node.exe >nul 2>&1
 taskkill /F /IM cloudflared.exe >nul 2>&1
 del cloudflare_log.txt >nul 2>&1
 del Link_Truy_Cap.txt >nul 2>&1
 
 echo.
-echo 2. (Da bo qua buoc bat localhost ngam)...
-:: powershell -WindowStyle Hidden -Command "Start-Process cmd -ArgumentList '/c npm start' -WindowStyle Hidden -WorkingDirectory '%~dp0'"
+echo 2. Dang bat he thong Microservices (Frontend + Backend) ngam...
+powershell -WindowStyle Hidden -Command "Start-Process cmd -ArgumentList '/c npm start' -WindowStyle Hidden -WorkingDirectory '%~dp0'"
 
 echo.
 echo 3. Dang tao Cloudflare Tunnel de lay link (Frontend Port 3000)...

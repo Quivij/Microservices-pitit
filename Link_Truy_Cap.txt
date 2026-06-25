@@ -1,6 +1,6 @@
 ===================================================
- LINK TRUY CAP VINH VIEN (GUI CHO KHACH HANG):
- https://vpp-stationery.estt.workers.dev/
+ LINK TRUY CAP CLOUDFLARE (LINK THAT):
+ https://incoming-cleaner-november-suit.trycloudflare.com
 ===================================================
 
 Luu y: Chieu/Toi khi ve, ban nho CHAY FILE [Tat_Ngam_Khong_XAMPP.bat] nhe!

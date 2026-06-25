@@ -1,206 +1,67 @@
-2026-06-24T00:41:03Z INF Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee, are subject to the Cloudflare Online Services Terms of Use (https://www.cloudflare.com/website-terms/), and Cloudflare reserves the right to investigate your use of Tunnels for violations of such terms. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps
-2026-06-24T00:41:03Z INF Requesting new quick Tunnel on trycloudflare.com...
-2026-06-24T00:41:08Z INF +--------------------------------------------------------------------------------------------+
-2026-06-24T00:41:08Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
-2026-06-24T00:41:08Z INF |  https://wool-potato-caution-sara.trycloudflare.com                                        |
-2026-06-24T00:41:08Z INF +--------------------------------------------------------------------------------------------+
-2026-06-24T00:41:08Z INF Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp]
-2026-06-24T00:41:08Z INF Version 2026.3.0 (Checksum 59b12880b24af581cf5b1013db601c7d843b9b097e9c78aa5957c7f39f741885)
-2026-06-24T00:41:08Z INF GOOS: windows, GOVersion: go1.24.13, GoArch: amd64
-2026-06-24T00:41:08Z INF Settings: map[ha-connections:1 protocol:quic url:http://localhost:3000]
-2026-06-24T00:41:08Z INF cloudflared will not automatically update on Windows systems.
-2026-06-24T00:41:08Z INF Generated Connector ID: c0fd389f-6b7d-4b33-be71-dfb0874a3b23
-2026-06-24T00:41:08Z INF Initial protocol quic
-2026-06-24T00:41:08Z INF ICMP proxy will use 10.72.129.30 as source for IPv4
-2026-06-24T00:41:08Z INF ICMP proxy will use fe80::b712:9cac:a8d4:17e8 in zone Ethernet 3 as source for IPv6
-2026-06-24T00:41:08Z INF cloudflared does not support loading the system root certificate pool on Windows. Please use --origin-ca-pool <PATH> to specify the path to the certificate pool
-2026-06-24T00:41:08Z INF ICMP proxy will use 10.72.129.30 as source for IPv4
-2026-06-24T00:41:08Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.53
-2026-06-24T00:41:08Z INF ICMP proxy will use fe80::b712:9cac:a8d4:17e8 in zone Ethernet 3 as source for IPv6
-2026-06-24T00:41:08Z INF Starting metrics server on 127.0.0.1:20241/metrics
-2026-06-24T00:41:08Z INF Registered tunnel connection connIndex=0 connection=21010b6f-c1b1-4033-9df0-3c990ff5c5ca event=0 ip=198.41.200.53 location=hkg13 protocol=quic
-2026-06-24T00:41:56Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:41:56Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:42:17Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:42:17Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:42:40Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:42:40Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:43:05Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:43:05Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:43:30Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:43:30Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:43:55Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:43:55Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:44:20Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:44:20Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:44:45Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:44:45Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:45:10Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:45:10Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:45:35Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:45:35Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:46:00Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:46:00Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:46:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:46:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:46:50Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:46:50Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:47:15Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:47:15Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:47:40Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:47:40Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:48:05Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:48:05Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:48:30Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:48:30Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:48:55Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:48:55Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:49:20Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:49:20Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:49:45Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:49:45Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:50:10Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:50:10Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:50:35Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:50:35Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:51:00Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:51:00Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:51:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:51:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:51:50Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:51:50Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:52:15Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:52:15Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:52:28Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:52:28Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:52:48Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:52:48Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:53:09Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:53:09Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:53:32Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:53:32Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:53:54Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:53:54Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:54:19Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:54:19Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:54:44Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:54:44Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:55:09Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:55:09Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:55:34Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:55:34Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:55:59Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:55:59Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:56:24Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:56:24Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:56:49Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:56:49Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:57:11Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:57:11Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:57:32Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:57:32Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:57:54Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:57:54Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:58:15Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:58:15Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:58:37Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:58:37Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:59:02Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:59:02Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:59:27Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:59:27Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T00:59:52Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T00:59:52Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:00:05Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:00:05Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:00:26Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:00:26Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:00:46Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:00:46Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:01:09Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:01:09Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:01:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:01:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:01:47Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:01:47Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:02:08Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:02:08Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:02:32Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:02:32Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:02:57Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:02:57Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:03:17Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:03:17Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:03:39Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:03:39Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:04:01Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:04:01Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:04:18Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:04:18Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:04:39Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:04:39Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:05:00Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:05:00Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:05:21Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:05:21Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:05:44Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:05:44Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:06:09Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:06:09Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:06:34Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:06:34Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:06:59Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:06:59Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:07:24Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:07:24Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:07:49Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:07:49Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:08:14Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:08:14Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:08:39Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:08:39Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:09:04Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:09:04Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:09:29Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:09:29Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:09:55Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:09:55Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:10:07Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:10:07Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:10:22Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:10:22Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:10:28Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:10:28Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:10:50Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:10:50Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:11:14Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:11:14Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:11:39Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:11:39Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:11:47Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:11:47Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:12:04Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:12:04Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:12:29Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:12:29Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:12:54Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:12:54Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:13:19Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:13:19Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:13:44Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:13:44Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:13:47Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:13:47Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:13:59Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:13:59Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:14:01Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
-2026-06-24T01:14:01Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://wool-potato-caution-sara.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.53 type=ws
-2026-06-24T01:14:20Z INF Initiating graceful shutdown due to signal terminated ...
-2026-06-24T01:14:20Z ERR failed to run the datagram handler error="context canceled" connIndex=0 event=0 ip=198.41.200.53
-2026-06-24T01:14:20Z ERR failed to serve tunnel connection error="accept stream listener encountered a failure while serving" connIndex=0 event=0 ip=198.41.200.53
-2026-06-24T01:14:20Z ERR Serve tunnel error error="accept stream listener encountered a failure while serving" connIndex=0 event=0 ip=198.41.200.53
-2026-06-24T01:14:20Z INF Retrying connection in up to 1s connIndex=0 event=0 ip=198.41.200.53
-2026-06-24T01:14:20Z ERR Connection terminated connIndex=0
-2026-06-24T01:14:20Z ERR no more connections active and exiting
-2026-06-24T01:14:20Z INF Tunnel server stopped
-2026-06-24T01:14:20Z INF Metrics server stopped
+2026-06-25T14:06:37Z INF Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee, are subject to the Cloudflare Online Services Terms of Use (https://www.cloudflare.com/website-terms/), and Cloudflare reserves the right to investigate your use of Tunnels for violations of such terms. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps
+2026-06-25T14:06:37Z INF Requesting new quick Tunnel on trycloudflare.com...
+2026-06-25T14:06:41Z INF +--------------------------------------------------------------------------------------------+
+2026-06-25T14:06:41Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
+2026-06-25T14:06:41Z INF |  https://incoming-cleaner-november-suit.trycloudflare.com                                  |
+2026-06-25T14:06:41Z INF +--------------------------------------------------------------------------------------------+
+2026-06-25T14:06:41Z INF Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp]
+2026-06-25T14:06:41Z INF Version 2026.3.0 (Checksum 59b12880b24af581cf5b1013db601c7d843b9b097e9c78aa5957c7f39f741885)
+2026-06-25T14:06:41Z INF GOOS: windows, GOVersion: go1.24.13, GoArch: amd64
+2026-06-25T14:06:41Z INF Settings: map[ha-connections:1 protocol:quic url:http://localhost:3000]
+2026-06-25T14:06:41Z INF cloudflared will not automatically update on Windows systems.
+2026-06-25T14:06:41Z INF Generated Connector ID: 8ecab149-d0bd-4e1e-8936-0bbbc3c68d3c
+2026-06-25T14:06:41Z INF Initial protocol quic
+2026-06-25T14:06:41Z INF ICMP proxy will use 192.168.1.2 as source for IPv4
+2026-06-25T14:06:41Z INF ICMP proxy will use 2001:ee0:4fc6:7c60:8da9:d6a3:aadc:8c2a in zone Wi-Fi as source for IPv6
+2026-06-25T14:06:41Z INF cloudflared does not support loading the system root certificate pool on Windows. Please use --origin-ca-pool <PATH> to specify the path to the certificate pool
+2026-06-25T14:06:41Z INF ICMP proxy will use 192.168.1.2 as source for IPv4
+2026-06-25T14:06:41Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.113
+2026-06-25T14:06:41Z INF ICMP proxy will use 2001:ee0:4fc6:7c60:8da9:d6a3:aadc:8c2a in zone Wi-Fi as source for IPv6
+2026-06-25T14:06:41Z INF Starting metrics server on 127.0.0.1:20241/metrics
+2026-06-25T14:06:42Z INF Registered tunnel connection connIndex=0 connection=b7ee74a2-fc80-425b-bcc3-20a3249a5690 event=0 ip=198.41.200.113 location=hkg08 protocol=quic
+2026-06-25T14:07:18Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
+2026-06-25T14:07:18Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://incoming-cleaner-november-suit.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.113 type=ws
+2026-06-25T14:07:41Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
+2026-06-25T14:07:41Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://incoming-cleaner-november-suit.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.113 type=ws
+2026-06-25T14:07:41Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
+2026-06-25T14:07:41Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://incoming-cleaner-november-suit.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.113 type=ws
+2026-06-25T14:08:03Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
+2026-06-25T14:08:03Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://incoming-cleaner-november-suit.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.113 type=ws
+2026-06-25T14:08:04Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
+2026-06-25T14:08:04Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://incoming-cleaner-november-suit.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.113 type=ws
+2026-06-25T14:08:17Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
+2026-06-25T14:08:17Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://incoming-cleaner-november-suit.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.113 type=ws
+2026-06-25T14:08:23Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
+2026-06-25T14:08:23Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://incoming-cleaner-november-suit.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.113 type=ws
+2026-06-25T14:08:26Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
+2026-06-25T14:08:26Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://incoming-cleaner-november-suit.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.113 type=ws
+2026-06-25T14:08:38Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
+2026-06-25T14:08:38Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://incoming-cleaner-november-suit.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.113 type=ws
+2026-06-25T14:08:49Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
+2026-06-25T14:08:49Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://incoming-cleaner-november-suit.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.113 type=ws
+2026-06-25T14:08:53Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
+2026-06-25T14:08:53Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://incoming-cleaner-november-suit.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.113 type=ws
+2026-06-25T14:08:58Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
+2026-06-25T14:08:58Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://incoming-cleaner-november-suit.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.113 type=ws
+2026-06-25T14:09:16Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
+2026-06-25T14:09:16Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://incoming-cleaner-november-suit.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.113 type=ws
+2026-06-25T14:09:18Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
+2026-06-25T14:09:18Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://incoming-cleaner-november-suit.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.113 type=ws
+2026-06-25T14:09:19Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
+2026-06-25T14:09:19Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://incoming-cleaner-november-suit.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.113 type=ws
+2026-06-25T14:09:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
+2026-06-25T14:09:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://incoming-cleaner-november-suit.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.113 type=ws
+2026-06-25T14:09:40Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
+2026-06-25T14:09:40Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://incoming-cleaner-november-suit.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.113 type=ws
+2026-06-25T14:09:42Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
+2026-06-25T14:09:42Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://incoming-cleaner-november-suit.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.113 type=ws
+2026-06-25T14:10:03Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
+2026-06-25T14:10:03Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://incoming-cleaner-november-suit.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.113 type=ws
+2026-06-25T14:10:08Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
+2026-06-25T14:10:08Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://incoming-cleaner-november-suit.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.113 type=ws
+2026-06-25T14:10:27Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
+2026-06-25T14:10:27Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://incoming-cleaner-november-suit.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.113 type=ws
+2026-06-25T14:11:11Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
+2026-06-25T14:11:11Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://incoming-cleaner-november-suit.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.113 type=ws
+2026-06-25T14:11:14Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:3000
+2026-06-25T14:11:14Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://incoming-cleaner-november-suit.trycloudflare.com/socket.io/?EIO=4&transport=websocket event=0 ip=198.41.200.113 type=ws
